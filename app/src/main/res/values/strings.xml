@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">NP full</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">N-Peloton</string>
+    <string name="nav_header_subtitle">Boîte à outil du cycliste Nantais</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="karoo_title">Karoo</string>
+
+    <string name="gpsies_title">Gpsies</string>
+    <string name="menu_home">Rides NP</string>
+    <string name="menu_gallery">Rides Karoo</string>
+    <string name="menu_slideshow">Ride Gpsies</string>
+    <string name="menu_tools">Settings</string>
+    <string name="menu_share">Share</string>
+    <string name="menu_send">Send</string>
+    <string name="push_karoo_button">Push To Karoo</string>
+</resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <PreferenceCategory
+        android:title="@string/karoo_title">
+
+    <EditTextPreference
+
+        android:key="karoo_email"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:inputType="textEmailAddress"
+        android:title="Mail" />
+    <EditTextPreference
+
+        android:key="karoo_password"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        android:title="Password" />
+
+    </PreferenceCategory>
+    <PreferenceCategory
+        android:title="@string/gpsies_title">
+
+        <EditTextPreference
+
+            android:key="gpsies_account1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:inputType="text"
+            android:title="Account ID" />
+
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
