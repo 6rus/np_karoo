@@ -1,5 +1,9 @@
 package fr.npeloton.npforkaroo.ui;
 
+import android.util.Log;
+
+import org.apache.commons.lang3.StringUtils;
+
 public class GpsiesItem {
     public String title,  id, km, elevation,description,summuryPolyline;
 
@@ -35,6 +39,41 @@ public class GpsiesItem {
     public  String getDescription(){
 
         return  getKm() + "  " + getElevation();
+
+    }
+
+    public  String getKMGpsies(){
+
+        String balise = "<p>";
+        int idx =  StringUtils.ordinalIndexOf(description,balise,3) + balise.length();
+        int idx2 = description.indexOf("|", 1);
+        Log.d("getKMGpsies", idx + " " +idx2);
+        return  description.substring(idx,idx2);
+    }
+
+    public  String getMonteeGpsies(){
+
+        String balise = "montées:";
+        int idx =  StringUtils.ordinalIndexOf(description,balise,1) + balise.length();
+        int idx2 = description.indexOf(",", idx);
+        Log.d("getMonteeGpsies", idx + " " +idx2);
+        return  " | " + description.substring(idx,idx2)+ "\u2191";
+    }
+
+    public  String getDescentesGpsies(){
+
+        String balise = "descentes:";
+        int idx =  StringUtils.ordinalIndexOf(description,balise,1) + balise.length();
+        int idx2 = description.indexOf("<", idx);
+        Log.d("getDescentesGpsies", idx + " " +idx2);
+        return  " | " + description.substring(idx,idx2)+ "\u2193";
+    }
+
+
+    public String getDescriptionGpises(){
+            return getKMGpsies() + "  " + getMonteeGpsies() + " "+getDescentesGpsies() ;
+
+
 
     }
 
@@ -83,5 +122,13 @@ public class GpsiesItem {
     public String getVueAllTrails(){
         String vue = "https://www.alltrails.com/widget/map?file_id="+id+"&referrer=gpsies&l=fr&&layer=true";
         return vue ;
+    }
+
+    public static int indexOf(String haystack, String needle, int ordinal) {
+        try {
+            return haystack.length() - haystack.split(needle, ordinal + 1)[ordinal].length() - 1;
+        } catch (ArrayIndexOutOfBoundsException e) {
+            return -1;
+        }
     }
 }

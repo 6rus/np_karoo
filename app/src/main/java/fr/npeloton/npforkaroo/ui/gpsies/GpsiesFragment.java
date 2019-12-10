@@ -252,14 +252,14 @@ public class GpsiesFragment extends Fragment {
             textViewView = (TextView) itemView.findViewById(R.id.text);
             imageView = (ImageView) itemView.findViewById(R.id.image);
             buttonKarooUpload = (Button)itemView.findViewById(R.id.karoo_upload);
-          //  kmView =  (TextView) itemView.findViewById(R.id.km);
+            kmView =  (TextView) itemView.findViewById(R.id.km);
         }
 
         //puis ajouter une fonction pour remplir la cellule en fonction d'un MyObject
         public void bind(final GpsiesItem myItem) {
             if(myItem!=null){
                 textViewView.setText(myItem.getTitle());
-           //     kmView.setText(Html.fromHtml(myItem.description));
+               kmView.setText(myItem.getDescriptionGpises());
 
             }
 
